@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Restaurant, MenuItem, User
+from database_setup import Base, Users, Questions, Results
 
 from flask import session as login_session
 import random, string
@@ -14,8 +14,6 @@ import httplib2
 import json
 from flask import make_response
 import requests
-
-CLIENT_ID = json.loads(open('client_secrets.json', 'r').read())['web']['client_id']
 
 #Connect to Database and create database session
 engine = create_engine('sqlite:///MBTestingDatabase.db')

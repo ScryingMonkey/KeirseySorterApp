@@ -39,9 +39,9 @@ class Questions(Base):
        """Return object data in easily serializeable format"""
        return {
            'id'             : self.id,
-           'number'         : self.number
-           'question'       : self.text,
-           'answerA'    : self.scoringA
+           'number'         : self.number,
+           'question'   : self.question,
+           'answerA'    : self.scoringA,
            'answerB'    : self.scoringB
        }
  
@@ -51,18 +51,18 @@ class Results(Base):
     id = Column(Integer, primary_key = True)
     user_id = Column(Integer,ForeignKey('users.id'))
     users = relationship(Users)
-	I = Column(String(250))
-	E = Column(String(250))
-	N = Column(String(250))
-	S = Column(String(250))
-	T = Column(String(250))
-	F = Column(String(250))
-	J = Column(String(250))
-	P = Column(String(250))
+    I = Column(String(250))
+    E = Column(String(250))
+    N = Column(String(250))
+    S = Column(String(250))
+    T = Column(String(250))
+    F = Column(String(250))
+    J = Column(String(250))
+    P = Column(String(250))
 
     @property
     def serialize(self):
-       """Return object data in easily serializeable format"""
+		"""Return object data in easily serializeable format"""
 		return {
 			'id'         	: self.id,
 			'user_id'    : self.user_id,

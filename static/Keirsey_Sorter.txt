@@ -112,7 +112,7 @@
 [Q] Do you speak more in (a) particulars than generalities           (b) generalities than particulars
 
 
-[Q] Which is more of a compliment: (a) “There's a logical person”           (b) “There's a sentimental person”
+[Q] Which is more of a compliment: (a) 'There's a logical person'           (b) 'There's a sentimental person'
 
 
 [Q] Which rules you more (a) your thoughts               (b) your feelings

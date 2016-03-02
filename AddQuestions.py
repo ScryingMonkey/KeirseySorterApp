@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
  
-from database_setup import Users, Questions, Results
+from database_setup import Users, Questions, Results, Base
  
 engine = create_engine('sqlite:///MBTestingDatabase.db')
 # Bind the engine to the metadata of the Base class so that the
@@ -47,7 +47,9 @@ def CollectQuestions(filePath):
             questions.append(question)
 
         else:
-            return questions
+			continue
+			
+    return questions
 
 #    for q in data:
 #        print "%s. %s..." %(q['number'], q['question'])
@@ -65,9 +67,9 @@ print questions
 for q in questions:
     question = Questions(number = q['number'],
                           question = q['question'],
-                          answerA = q['answerA']
+                          answerA = q['answerA'],
                           answerB = q['answerB'] )
     print "%s. %s..." %(q['number'], q['question'])
     
-    session.add(restaurant1)
+    session.add(question)
     session.commit()
