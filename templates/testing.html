@@ -1,0 +1,111 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container">
+	<div class="row top-menu">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 text-right">
+					</div>
+	</div>
+	<div class="row divider blue">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			<h1>Testing Panel</h1>
+		</div>
+	</div>
+
+	<div class = 'flash'>
+				  {% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			  
+			<ul>
+			{% for message in messages %}
+				<li> <strong> {{ message }} </strong> </li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+	</div>
+	<!-- horizontal line -->
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+
+	<div class="row">
+		
+		<!-- Button Panel -->
+		<div class="col-md-5 padding-none" style="border-right:1px solid #DCDCDC;height:160px">
+			<!-- First row of buttons -->
+			<div class="row padding-bottom">
+				<div class="col-md-1 padding-none"></div>
+				<!-- First button -->
+				<div class="col-md-4  padding-none">
+					<a href="{{url_for('newRestaurant')}}">
+						<button class="btn btn-default" id="new-restaurant">
+							<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>First button
+						</button>
+					</a>
+				</div>	
+				<div class="col-md-1 padding-none"></div>
+				<!-- Second button -->
+				<div class="col-md-4 padding-none">
+					<a href="{{url_for('newRestaurant')}}">
+						<button class="btn btn-default" id="new-restaurant">
+							<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>Second button
+						</button>
+					</a>
+				</div>
+			</div>
+			<!-- Second row of buttons -->
+			<div class="row">
+				<div class="col-md-1 padding-none"></div>
+				<!-- First button -->
+				<div class="col-md-4  padding-none">
+					<a href="{{url_for('newRestaurant')}}">
+						<button class="btn btn-default" id="new-restaurant">
+							<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>Third button
+						</button>
+					</a>
+				</div>	
+				<div class="col-md-1 padding-none"></div>
+				<!-- Second button -->
+				<div class="col-md-4 padding-none">
+					<a href="{{url_for('newRestaurant')}}">
+						<button class="btn btn-default" id="new-restaurant">
+							<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>Fourth button
+						</button>
+					</a>
+				</div>
+			</div>			
+			
+		</div>
+		
+		<!-- Results Panel -->
+		<div class="col-md-7 padding-right display-panel">
+			<div class="row" >
+				
+				<div class="col-md-10 display-text vcenter">
+					Test... Test... Test... Test... Test... Test...Test...Test...Test...Test...Test...Test...Test...Test... Test... Test... Test... Test... Test...Test...Test...Test...Test...Test...Test...Test...Test... Test... Test... Test... Test... Test...Test...Test...Test...Test...Test...Test...Test...Test... Test... Test... Test... Test... Test...Test...Test...Test...Test...Test...Test...Test...Test... Test... Test... Test... Test... Test...Test...Test...Test...Test...Test...Test...Test...Test... Test... Test... Test... Test... Test...Test...Test...Test...Test...Test...Test...Test...
+				</div>
+				
+			</div>
+		</div>
+	
+<!-- horizontal line -->	
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+
+
+
+{% endblock %}
